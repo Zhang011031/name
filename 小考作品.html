@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <title></title>
+        <script src="js/jquery-3.6.4.js"></script>
+
+        <script>
+            //網頁元素載入就執行ready事件
+            $(document).ready(function(){
+                //宣告index用來代表目前是第幾筆紀錄，0表示第一筆
+                var index  = 0;
+                //將#divShow的內容清除
+                $("#divShow").empty();
+                //宣告img , title , info用來放置四筆書籍圖片、書名與書籍說明
+                var img = new Array("AEL019800.jpg","AEL021400.jpg","AEL022100.jpg","AEL019300.jpg")
+                var title = new Array("跟著實務學習ASP.NET MVC","跟著實務學習網頁設計","Python基礎必修課","Visual C# 2017程式設計經典")
+                var info = new Array("11111111111111111","122222222222222222222222","33333333333333333333333333333","444444444444444444444444444")
+                var price = new Array(520,490,450,650);
+
+                var cardHeader = new Array("card-header bg-primary text-white","card-header bg-info","card-header bg-warning",
+                "card-header bg-danger text-white")
+
+                //呼叫setData()涵式，在卡片中顯示第index個陣列元素書籍的資訊
+                setData(index);
+
+                //建立setData()涵是用來指定卡片的書籍內容
+                function setData(index){
+                    $("#bookTitle").text(title[index]);
+                    $("#bookImg").attr("src","images/"+img[index]);
+                    $("#bookinfo").text(info[index]);
+                    $("#header").attr("class",cardHeader[index]);
+                    $("#pr").text("特價"+price[index]+"元");
+                }
+
+                //按下[下一筆]鈕，btnNext按鈕
+                $("#btnNext").on("click",function(){
+                    //移往下一筆
+                    index++;
+                    //判斷是否超出最後一筆
+                    if (index >= img.length){
+                        //指定從第一筆開始
+                        index = 0;
+                    }
+                    //呼叫setData()涵式，在卡片中顯示第index個陣列元素書籍的資訊
+                    setData(index)
+                });
+                //按下[上一筆]鈕，btnNext按鈕
+                $("#btnPre").on("click",function(){
+                    //移往上一筆
+                    index--;
+                    //判斷是否最後一筆
+                    if (index < 0){
+                        //指定從第一筆開始
+                        index = img.length-1;
+                    }
+                    //呼叫setData()涵式，在卡片中顯示第index個陣列元素書籍的資訊
+                    setData(index)
+                });
+
+                //已購買商品清單
+                var items = new Array();
+
+                $("#btnadd").on("click",function(){
+                    var product = new Array(img[index],title[index],price[index]);
+                    items.push(product);
+                    alert(title[index]+"已加入購物車");
+                })
+
+                $("#showall").on("click",function(){
+
+                    $("#showItems").empty();
+
+                    var lots = items.length,totalprice = 0 ,str="";
+                    str = "<table class='table'> <tr> <th>商品圖示</th> <th>商品名稱</th> <th>商品價格</th></tr>";
+                    for(var i =0;i < lots;i++){
+                        str +="<tr><td><img src='images/"+items[i][0]+"'style=width:50px;' /></td>"+
+                            "<td>"+items[i][1]+"</td>"+
+                            "<td>"+items[i][2]+"元 </td></tr>";
+                        totalprice += items[i][2];
+                    }
+                    str +="</table>"+"<h2 class='text-danger'>總金額"+totalprice+"元</h2>"
+                    $("#showItems").append(str);
+
+                });
+                $("#cleanall").on("click",function(){
+                    var lots = items.length;
+                    for(var i=0;i<lots;i++) items.pop();
+                    $("#showItems").empty();
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="container mt-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white" id="header"><span id="bookTitle"></span></div>
+                <div class="card-body" >
+                    <img id="bookImg" class="float-left" style="width:200px;"/>
+                    <p id="bookinfo" class="m-2" ></p>
+                    <p id="pr" class="m-2 h2 text-danger "></p>
+                    <input type="button" value="加入購物車" id="btnadd" class="btn-success" />
+                </div>
+            </div>
+            <br />
+            <input type="button" value="上一筆" id="btnPre" class="btn btn-primary" />
+            <input type="button" value="下一筆" id="btnNext" class="btn btn-primary" />
+        </div>
+        <div class="container mt-4">
+            <div class="row" id="divShow"></div>
+
+                <button id="showall" class="btn-success" >查看購物車</button>
+                <button id="cleanall" class="btn-success">清空購物車</button>
+
+                <div class="row" id="showItems"></div>
+        </div>
+    </body>
+</html>
