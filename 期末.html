@@ -43,117 +43,122 @@
 
     </head>
     <body>
-            <div data-role="page" id="main_page">
-                <div data-role="header">
-                    <h3>大才全購物網</h3>
-                </div>
-                <div data-role="content">
-                    <ul data-role="listview" data-inset="true">
-                        <li data-role="list-divider">購物紀錄</li>
-                        <li><a href="#">待出貨<span class="ui-li-count">1</span></a></li>
-                        <li><a href="#">購買紀錄</a></li>
-                        <li><a href="#">退貨紀錄</a></li>
-
-                    </ul>
-                    <ul data-role="listview" data-inset="true">
-                        <li data-role="list-divider">會員專區</li>
-                        <li><a href="#">我的評價<span class="ui-li-count">8</span></a></li>
-                        <li><a href="#">留言紀錄<span class="ui-li-count">32</span></a></li>
-                        <li><a href="#">瀏覽紀錄</a></li>
-                        <li><a href="#">更新資料</a></li>
-                        <li data-role="list-divider" data-inset="true">優惠專區</li>
-                        <li><a href="#">我的點數<span class="ui-li-count">820</span></a></li>
-                        <li><a href="#">點數兌換紀錄</a></li>
-                    </ul>
-                </div> 
-                <div data-role="footer" data-position="fixed">
-                    <div data-role="navbar">
-                        <ul>
-                            <li><a href="#main_page" data-icon="home">會員專區</a></li>
-                            <li><a href="#coll" data-icon="camera">購物專區</a></li>
-                            <li><a href="#allCart" data-icon="eye">購物車</a></li>
-                        </ul>
-                    </div>
-                    <h3>輕鬆購物，你看的見</h3>
-                </div>
+        <div data-role="page" id="main_page">
+            <div data-role="header" data-position="fixed">
+                <h3>大才全購物網</h3>
             </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">購物紀錄</li>
+                    <li><a href="#">待出貨<span class="ui-li-count">1</span></a></li>
+                    <li><a href="#">購買紀錄</a></li>
+                    <li><a href="#">退貨紀錄</a></li>
 
-
-            <div data-role="content" id="coll">
-                <div data-role="header">
-                    <h3>大才全購物網</h3>
+                </ul>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">會員專區</li>
+                    <li><a href="#">我的評價<span class="ui-li-count">8</span></a></li>
+                    <li><a href="#">留言紀錄<span class="ui-li-count">32</span></a></li>
+                    <li><a href="#">瀏覽紀錄</a></li>
+                    <li><a href="#">更新資料</a></li>
+                    <li data-role="list-divider" data-inset="true">優惠專區</li>
+                    <li><a href="#">我的點數<span class="ui-li-count">820</span></a></li>
+                    <li><a href="#">點數兌換紀錄</a></li>
+                </ul>
+            </div> 
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#main_page" data-icon="home">會員專區</a></li>
+                        <li><a href="#coll" data-icon="camera">購物專區</a></li>
+                        <li><a href="#allCart" data-icon="eye">購物車</a></li>
+                    </ul>
                 </div>
-                <div data-role="collapsible-set">
-                    <ul data-role="listview" data-inset="true">
+                <h3>輕鬆購物，你看的見</h3>
+            </div>
+        </div>
+
+        <div data-role="page" id="coll">
+            <div data-role="header" data-position="fixed">
+                <h3>大才全購物網</h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
                     <li data-role="list-divider">購物專區</li>
-                    </ul>
-                    <div data-role="collapsible">
-                        <h3>網頁設計第一名好書</h3>
-                        <div style="text-align: center;">
+                    <div data-role="collapsible-set">
+                        <div data-role="collapsible" style="text-align: center;">
+                            <h3>網頁設計第一名好書</h3>
                             <p>
-                                <img src="books/AEL019600.jpg" style="max-width: 50%;" />
+                                <img src="books/AEL019600.jpg" style="height: 200px;">
                             </p>
-                            <h3>跟著實務學習HTML5、CSS3、JavaScript、jQuery第一次上手</h3>
-                            <p>單價:470元<button onclick="add(0)">加入購物車</button></p>
+                            <p>
+                                跟著實務學習HTML5
+                            </p>
+                            <p>
+                                單價:470元<button onclick="add(0)">加入購物車</button>
+                            </p>
+                        </div>
+                        <div data-role="collapsible" style="text-align: center;">
+                            <h3>工程師必備MVC</h3>
+                            <p>
+                                <img src="books/AEL019800.jpg" style="height: 200px;">
+                            </p>
+                            <p>
+                                跟著實務學習MVC
+                            </p>
+                            <p>
+                                單價:520元<button onclick="add(1)">加入購物車</button>
+                            </p>
+                        </div>
+                        <div data-role="collapsible" style="text-align: center;">
+                            <h3>大學考試靠它</h3>
+                            <p>
+                                <img src="books/AEL019900.jpg" style="height: 200px;">
+                            </p>
+                            <p>
+                                C語言基礎必修課
+                            </p>
+                            <p>
+                                單價:420元<button onclick="add(2)">加入購物車</button>
+                            </p>
                         </div>
                     </div>
-                    <div data-role="collapsible">
-                        <h3>工程師必備MVC</h3>
-                        <div style="text-align: center;">
-                            <p>
-                                <img src="books/AEL019800.jpg" style="max-width: 50%;" />
-                            </p>
-                            <h3>跟著實務學習ASP.NET MVC 5.x第一次許MVC就上手</h3>
-                            <p>單價:520元<button onclick="add(1)">加入購物車</button></p>
-                        </div>
-                    </div>    
-                    <div data-role="collapsible">
-                        <h3>大學考試都靠它</h3>
-                        <div style="text-align: center;">
-                            <p>
-                                <img src="books/AEL019900.jpg" style="max-width: 50%;" />
-                            </p>
-                            <h3>C語言基礎必修課</h3>
-                            <p>單價:420元<button onclick="add(2)">加入購物車</button></p>
-                        </div>
-                    </div>        
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#main_page" data-icon="home">會員專區</a></li>
+                        <li><a href="#coll" data-icon="camera">購物專區</a></li>
+                        <li><a href="#allCart" data-icon="eye">購物車</a></li>
                     </ul>
                 </div>
-                <div data-role="footer" data-position="fixed">
-                    <div data-role="navbar">
-                        <ul>
-                            <li><a href="#main_page" data-icon="home">會員專區</a></li>
-                            <li><a href="#coll" data-icon="camera">購物專區</a></li>
-                            <li><a href="#allCart" data-icon="eye">購物車</a></li>
-                        </ul>
-                        <h3>DTC Book版權所有</h3>
-                    </div>
+                <h3>DTC Book版權所有</h3>
+            </div>
+        </div>
+
+        <!--購物車畫面-->
+        <div data-role="page" id="allCart">
+            <div data-role="header">
+                <h3>購物車</h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview">
+                    <li><a href="#coll"style="text-align:right">返回購物</a></li>
+                    <div id="allBuys"></div>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <h3>購物車有<span id="oo">0</span>件商品，結帳金額為:<span id="totalPrice">0</span>元</h3>
+                    <ul>
+                        <li><a href="#main_page" data-icon="home">會員專區</a></li>
+                        <li><a href="#coll" data-icon="camera">購物專區</a></li>
+                        <li><a href="#allCart" data-icon="eye">購物車</a></li>
+                    </ul>
+                    <h3>DTC Book版權所有</h3>
                 </div>
             </div>
-
-            
-            <!--購物車畫面-->
-            <div data-role="page" id="allCart">
-                <div data-role="header">
-                    <h3>購物車</h3>
-                </div>
-                <div data-role="content">
-                    <ul data-role="listview">
-                        <li><a href="#coll"style="text-align:right">返回購物</a></li>
-                        <div id="allBuys"></div>
-                    </ul>
-                </div>
-                <div data-role="footer" data-position="fixed">
-                    <div data-role="navbar">
-                        <h3>購物車有<span id="oo">0</span>件商品，結帳金額為:<span id="totalPrice">0</span>元</h3>
-                        <ul>
-                            <li><a href="#main_page" data-icon="home">會員專區</a></li>
-                            <li><a href="#coll" data-icon="camera">購物專區</a></li>
-                            <li><a href="#coll" data-icon="eye">購物車</a></li>
-                        </ul>
-                        <h3>DTC Book版權所有</h3>
-                    </div>
-                </div>
-            </div>  
+        </div>  
     </body>
 </html>
