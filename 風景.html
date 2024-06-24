@@ -18,13 +18,13 @@
                 <a class="navbar-brand" href="#">
                     <img src="images/學校.png" style="width: 40px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="風景.html">風景</a>
+                            <a class="nav-link active" aria-current="page" href="寵物.html">寵物</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="飼料.html">飼料</a>
@@ -32,97 +32,80 @@
                 </div>
             </div>
         </nav>
-        <div>
-            <p>
-                <a class="btn btn-primary" data-bs-toggle="collapse" href="#card1" role="button">
-                    狗狗
-                </a>
-                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#card2">
-                    還是狗狗
-                </button>
-                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse">
-                    全部卡片收回or放出
-                </button>
-            </p>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="collapse multi-collapse" id="card1">
-                    <div class="card">
-                        <div class="card-header">
-                            金毛
-                        </div>
-                        <div class="card-body">
-                            <img src="images/狗1.jpg" class="img-fluid" style="width: 50%;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="collapse multi-collapse" id="card2">
-                    <div class="card">
-                        <div class="card-header">
-                            柯基
-                        </div>
-                    <div class="card-body">
-                        <img src="images/狗2.jpg" class="img-fluid" style="width: 40%;">
-                    </div>
-                </div>
-            </div>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+            <img src="images/01.jpg" class="d-block w-100">
         </div>
-        <div class="container my-4">
-            <h1>狗的種類介紹</h1>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            哈士奇
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>
-                                哈士奇是北方地區雪橇型狗的總稱，他們的快速拉動的風格與其他雪橇犬不同。 他們是由速度最快的雪橇犬不斷交配的品種。相比之下，阿拉斯加雪橇犬是「最大和最有力的」雪橇犬，常被用於較重的承載。哈士奇被用於雪橇犬拉車比賽。近幾年來，有些業者一直在為冒險旅行者推銷狗拉雪橇的雪地旅遊徒步旅行。哈士奇現今也作為寵物飼養，某些團體正為退休賽車和冒險徒步的狗尋找新家。哈士奇也常被主人稱為二哈。
-                            </p>
-                            <p class="text-center">
-                                <img src="images/狗3.jpg" class="img-fluid" style="width: 25%;">
-                            </p>
-                        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/02.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/03.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/04.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/05.jpg" class="d-block w-100">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card my-3 h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">第一張圖</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/02.jpg" class="img-fluid">
+                        <p class="card-text">
+                            海邊的風景，空蕩的橋，讓人看了心曠神怡。
+                        </p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                            吉娃娃
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>
-                                吉娃娃的性格極為神經質，絕大多數的吉娃娃喜歡到處吠叫，這也是吉娃娃之所以為人詬病的其中一點。由於牠們的體型很細小，身體十分瘦弱，所以極容易受到傷害。牠們細小的體型也為牠們帶來好處：因為牠們體型細小，使牠們能輕易適應現代的生活環境，包括市區和小公寓，適合老年人飼養。一般來說，小心飼養的話，吉娃娃犬都可以有長達17年及以上的壽命。
-                            </p>
-                            <p class="text-center">
-                                <img src="images/狗4.jpg" class="img-fluid" style="width: 25%;">
-                            </p>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card my-3 h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">第二張圖</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/01.jpg" class="img-fluid">
+                        <p class="card-text">
+                            這張圖雖然只是一張網圖，但他的風景很美，非常吸引人
+                        </p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                            柴犬
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>
-                                「柴犬」一詞在日文中意即「灌木叢狗」，發源於日本中央高地。在文獻上，為昭和初期的日本犬保存會的會刊「日本犬」所採用。「柴」是「打柴人」的「柴」，指小型的雜木。由於柴犬能巧妙地穿過雜木幫助打獵，而且紅褐色的毛色與枯萎的柴相似，故名。亦有人認為古語的「柴」，是把信州的柴村作為起源地。
-                            <p class="text-center">
-                                <img src="images/狗5.jpg" class="img-fluid" style="width: 25%;">
-                            </p>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card my-3 h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">第三張圖</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/04.jpg" class="img-fluid">
+                        <p class="card-text">
+                           這只是隨邊湊個數的圖，沒啥重要的介紹
+                        </p>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </body>
 </html>
